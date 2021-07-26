@@ -1,3 +1,4 @@
+# create a project plan for pipeline and assign build spec ymal file of plan commands
 resource "aws_codebuild_project" "tf-plan" {
   name          = "tf-cicd-plan"
   description   = "Plan stage for terraform"
@@ -24,6 +25,7 @@ resource "aws_codebuild_project" "tf-plan" {
   }
 }
 
+# create a project apply for pipeline and assign build spec ymal file of apply commands
 
 resource "aws_codebuild_project" "tf-apply" {
   name          = "tf-cicd-apply"
@@ -51,7 +53,7 @@ resource "aws_codebuild_project" "tf-apply" {
   }
 }
 
-
+# define the pipeline and it's stages
 resource "aws_codepipeline" "cicd_pipeline" {
 
     name = "tf-cicd"

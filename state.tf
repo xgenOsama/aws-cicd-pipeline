@@ -1,4 +1,5 @@
 terraform {
+# set the tfstate file in s3 bucket to trace changes
   backend "s3"{
     bucket = "xgen-aws-cicd-pipeline"
     encrypt = true
